@@ -126,4 +126,20 @@ extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     "List of Walks"
   }
+  // дает возможность редактирования строки
+  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+  true
+  }
+  // задает действие при нажатии delete
+  func tableView(_ tableView: UITableView,commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+  // получаем ссылку на прогулку и кастим до Walk
+    guard let walkToRemove = currentDog?.walks?[indexPath.row] as? Walk,
+      editingStyle == .delete else { return }
+  // удаляем прогулку из Core Data, а также из relationship
+    coreDataStack.managedContext.delete(walkToRemove)
+  // сохраняем контекст
+    coreDataStack.saveContext()
+  // удаляем строку таблицы
+    tableView.deleteRows(at: [indexPath], with: .automatic)
+  }
 }
