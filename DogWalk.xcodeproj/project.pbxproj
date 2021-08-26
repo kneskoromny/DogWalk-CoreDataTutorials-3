@@ -77,12 +77,12 @@
 				FE0EF92F22FDDF4C00D0800D /* AppDelegate.swift */,
 				FE0EF93122FDDF4C00D0800D /* SceneDelegate.swift */,
 				FE0EF93322FDDF4C00D0800D /* ViewController.swift */,
+				F7703B9D26C7FA5E00D7DAFB /* CoreDataStack.swift */,
 				F7703B9F26C8001300D7DAFB /* DogWalk.xcdatamodeld */,
 				FE0EF93522FDDF4C00D0800D /* Main.storyboard */,
 				FE0EF93B22FDDF4D00D0800D /* Assets.xcassets */,
 				FE0EF93D22FDDF4D00D0800D /* LaunchScreen.storyboard */,
 				FE0EF94022FDDF4D00D0800D /* Info.plist */,
-				F7703B9D26C7FA5E00D7DAFB /* CoreDataStack.swift */,
 			);
 			path = DogWalk;
 			sourceTree = "<group>";
